@@ -1,0 +1,247 @@
+
+
+* {
+   margin: 0;
+   padding: 0;
+   max-width: 100%;
+   text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+body {
+  background: #f0cf85; 
+  color: white;
+  font-family: 'Titillium Web', sans-serif;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;               
+}
+
+body::-webkit-scrollbar-track {
+  background: #734444;         
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #99b27f;   
+  border-radius: 20px;       
+  border: 3px solid ;  
+  border-color:#734444 ;
+}
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #734444; 
+    height: 8vh;
+    padding: 1vh;
+}
+
+.btnmobile {
+    cursor: pointer;
+    display: none;
+
+}
+
+
+.btnmobile div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 7px;
+    transition: all .3s ease-in;
+
+}
+
+.nav {
+    margin-right: 50px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    color: white;
+    font-size: 20px;
+}
+
+.nav li  a{
+    color: white;
+}
+
+.nav li  :hover  {
+    opacity: 40%;
+
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+
+}
+
+.about {
+    justify-content: start;
+
+}
+
+
+#img1, #img2 {
+    display: flex;
+}
+
+img {
+    width: 100%;
+    
+}
+
+button {
+    border:none;
+    padding: 5px;
+    color: white;
+    background: #32afa9 ;
+    margin-top: 20px;
+}
+
+label {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+input {
+    border: none;
+    border-radius: 5px;
+    
+    text-align: center;
+}
+.ebook {
+    height: 60vh;
+    display: flex;
+    background: #99b27f;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+
+}
+#ebooktext {
+    background: #99b27f;
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;  
+    background: #c37857;
+    padding: 10%;
+
+}
+
+@media screen and (max-width: 570px) {
+
+
+    .nav {
+
+        position: fixed;
+        background: #734444; 
+        color: white;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        z-index: 100;
+        display: none;
+        
+    }
+
+    .navlista {
+        flex-direction: column;
+    
+        
+
+    }
+
+    .navlista li {
+        margin-bottom: 5vh;
+    }
+    
+    .nav.active {
+        display: flex;
+
+    }
+
+    .corpo.active {
+        max-height: 85vh;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+    }
+    .text {
+        padding: 10%;
+    }
+    #img1 {
+        order: 0;
+    }
+    #text1 {
+        order: 1;
+    }
+    #img2 {
+        order: 2;
+    }
+    #text2 {
+        order: 3;
+    }
+    #ebooktext {
+        order: 4;
+    }
+    #form {
+        order: 5;
+    }
+
+    .btnmobile {
+        display: block;
+        position: relative;
+        right: 0px;
+        z-index: 101;
+        
+    }
+
+
+    .btnmobile.active .line2 {
+        display: none;
+    }
+
+    .btnmobile.active .line1 {
+        transform: translateY(5px) rotate(45deg);
+        transition: all .3s ease-in;
+    }
+
+    .btnmobile.active .line3 {
+        transform: translateY(-5px)rotate(-45deg);
+        transition: all .3s ease-in;
+    }
+}
+
+
+
